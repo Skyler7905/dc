@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NexusX</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
+  <link rel="stylesheet" href="index.css"> <!-- Updated to use the Discord-inspired CSS -->
+</head>
+
+<body>
+
+  <!-- Home Section -->
+   
+  <div id="home" class="section hidden">
+    <h1>NexusX</h1>
+    <div class="center-content">
+      <img src="img/logo.png" alt="Logo" class="logo">
+      <div class="button-group">
+        <button id="startBtn" class="uk-button uk-button-primary">Start</button>
+        <button id="joinBtn" class="uk-button uk-button-primary">Join</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Create Section -->
+  <div id="create" class="section hidden">
+    <div class="center-content">
+      <img src="img/logo.png" alt="Logo" class="logo">
+      <input class="uk-input" id="caller_code" type="text" placeholder="Share this code" readonly>
+      <button id="startCallBtn" class="uk-button uk-button-primary">Start Call</button>
+    </div>
+  </div>
+
+  <!-- Join Section -->
+  <div id="join" class="section hidden">
+    <div class="center-content">
+      <img src="img/logo.png" alt="Logo" class="logo">
+      <input class="uk-input" id="join_code" type="text" placeholder="Enter call code">
+      <button id="joinCallBtn" class="uk-button uk-button-primary">Join Call</button>
+    </div>
+  </div>
+
+  <!-- Call Section -->
+  <div id="call" class="section hidden">
+    <div class="outer-container">
+      <div class="inner-container">
+        <div class="video-overlay">
+          <video id="localVideo" autoplay muted></video>
+        </div>
+        <video id="remoteVideo" autoplay></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="webrtc.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

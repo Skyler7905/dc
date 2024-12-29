@@ -1,0 +1,144 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #2c2f33; /* Discord dark background */
+    color: #fff; /* Light text for dark mode */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Hide sections by default */
+  .hidden {
+    display: none;
+  }
+  
+  /* Centering content */
+  .section {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #23272a; /* Slightly lighter background for contrast */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Logo styling */
+  .logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+  }
+  
+  /* Buttons */
+  .uk-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #5865f2; /* Discord blue */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .uk-button:hover {
+    background-color: #4752c4; /* Darker blue for hover */
+  }
+  
+  /* Input fields */
+  .uk-input {
+    width: 80%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #99aab5; /* Soft grey border */
+    background-color: #2c2f33; /* Match background */
+    color: #fff;
+    text-align: center;
+  }
+  
+  .uk-input::placeholder {
+    color: #99aab5;
+  }
+  
+  .uk-input:focus {
+    outline: none;
+    border-color: #5865f2; /* Highlight on focus */
+    box-shadow: 0 0 5px #5865f2;
+  }
+  
+  /* Video containers */
+  .outer-container {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    height: 480px;
+    margin: 0 auto;
+    background-color: #23272a; /* Matching contrast background */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .inner-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .video-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 150px;
+    height: 100px;
+    z-index: 10;
+    border: 2px solid #5865f2; /* Border for local video */
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #000; /* Fallback background */
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Tooltip Fix for UIkit */
+  .uk-tooltip {
+    background-color: #5865f2 !important;
+    color: #fff !important;
+    border-radius: 5px !important;
+    padding: 10px !important;
+    font-size: 0.9rem !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+  }
+  
